@@ -1,4 +1,4 @@
-<?php // Thos opens the php section
+<?php // This opens the php section
 
 echo "<html>";
 echo "<head>";  // Allows for a head to be created
