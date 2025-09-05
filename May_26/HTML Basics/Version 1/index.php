@@ -21,7 +21,7 @@ echo "<body>";  // Opens the body
         echo "<tr>";
             echo "<td> Hello1 </td>";
             echo "<td> Hello2 </td>";
-            echo "<td> Hello3 </td>"; //table
+            echo "<td> Hello3 </td>";
         echo "</tr>";
 
     echo "</table>";
