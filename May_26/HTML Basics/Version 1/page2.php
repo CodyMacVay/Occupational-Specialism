@@ -11,6 +11,11 @@ echo "<html>";
         echo "<br>";
         echo "<br>";
         echo "<img src='homer.jfif'>";
+        echo "<br>";
+
+        echo "Too see the description of the simpsons click here_";
+        echo "<a href= 'page3.php'>Next Page</a>";
+
     echo "</body>";
 
 echo "</html>";

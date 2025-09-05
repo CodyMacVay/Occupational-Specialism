@@ -26,6 +26,12 @@ echo "<body>";  // Opens the body
 
     echo "</table>";
 
+
+    echo "<ol>";
+        echo "<li> Homer simpsons wife </li>";
+        echo "<li> And his children </li>";
+    echo "</ol>";
+
 echo "</body>";
 
 ?>
