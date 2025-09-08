@@ -10,7 +10,7 @@ echo "<html>";
         echo "<a href='https://www.gettyimages.co.uk/photos/homer-simpson'> Click here for more </a>";
         echo "<br>";
         echo "<br>";
-        echo "<img src='homer.jfif'>";
+        echo "<img src='Images/homer.jfif'>";
         echo "<br>";
 
         echo "Too see the description of the simpsons click here_";

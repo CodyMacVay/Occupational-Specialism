@@ -1,0 +1,4 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;  /* Pick two fonts and add sans-serif as a fall back */
+    background-color: #36454F;  /* This is a charcoal gray color */
+}

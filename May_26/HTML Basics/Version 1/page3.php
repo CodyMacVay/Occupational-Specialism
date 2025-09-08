@@ -15,7 +15,7 @@
 
             echo "<br>";
 
-            echo "<img src='homer.jfif'>";
+            echo "<img src='Images/homer.jfif'>";
 
             echo "<br>";
 

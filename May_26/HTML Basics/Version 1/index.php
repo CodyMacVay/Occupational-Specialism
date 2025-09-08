@@ -5,6 +5,7 @@ echo "<!DOCTYPE html>";  // Desired tag to declare the correct structure of an h
 echo "<html>";
 echo "<head>";  // Allows for a head to be created
     echo "<title>Love html</title>";  // Adds a title inside the head that was created in the line before
+    echo "<link rel='stylesheet' href='CSS/style.css'>";
 
 echo "</head>";  // Closes the head on the website
 echo "<body>";  // Opens the body
@@ -13,8 +14,10 @@ echo "<body>";  // Opens the body
 
     echo "This is my page.";
 
-    echo "<a href='page2.php'>Go to Page 2</a>";
+    echo "<a id='button' href='page2.php'>Homers description</a>";
 
+    echo "<p id='today'>Today is Monday</p>";
+    echo "<p> Today is Monday</p>";
 
     echo "<table>";
 
@@ -31,7 +34,7 @@ echo "<body>";  // Opens the body
         echo "<li> Homer simpsons wife </li>";
         echo "<li> And his children </li>";
     echo "</ol>";
-
+    echo "<img id = 'homer' src='Images/homer.jfif'>";
 echo "</body>";
 
 ?>
