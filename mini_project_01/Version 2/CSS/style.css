@@ -1,0 +1,180 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;  /* Sets default font */
+    background-color: #f0f2f5;       /* Light gray background */
+    margin: 0;                       /* Remove default margins */
+    padding: 0;                      /* Remove default padding */
+    text-align: center;              /* Center-align text by default */
+}
+
+/* Header banner image */
+#header img {
+    width: 100%;                     /* Full width of the page */
+    height: 150px;                   /* Fixed height */
+    object-fit: cover;            /* Crop image to fill area */
+}
+
+
+/* Special ID #sign image  */
+#sign {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #333;          /* Dark gray background */
+    padding: 10px 0;                 /* Space above/below links */
+}
+
+/* Navigation links */
+nav a {
+    color: white;                    /* White text */
+    margin: 0 15px;                  /* Horizontal spacing between links */
+    text-decoration: none;           /* Remove underlines */
+    font-weight: bold;               /* Bold text */
+}
+
+/* Hover effect on nav links */
+nav a:hover {
+    text-decoration: underline;      /* Show underline on hover */
+}
+
+/* Main headings */
+h1 {
+    color: #333;                     /* Dark gray text */
+    margin-top: 20px;                /* Space above heading */
+    text-align: center;              /* Center the heading */
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;                /* Space above forms */
+}
+
+/* Text and email input fields */
+input[type='text'],
+input[type='email'] {
+    padding: 10px;                   /* Inner spacing */
+    width: 200px;                    /* Fixed width */
+    margin: 5px;                     /* Small spacing around */
+    border: 1px solid #ccc;          /* Light gray border */
+    border-radius: 4px;              /* Rounded corners */
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;              /* Inner spacing */
+    background-color: #4CAF50;       /* Green background */
+    border: none;                    /* Remove border */
+    color: white;                    /* White text */
+    border-radius: 4px;              /* Rounded corners */
+    cursor: pointer;                 /* Pointer cursor on hover */
+    margin: 5px;                     /* Small spacing */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;       /* Darker green on hover */
+}
+
+/* Section container */
+.section {
+    max-width: 800px;                /* Limit width */
+    margin: 0 auto;                  /* Center horizontally */
+    text-align: left;                /* Align content left */
+    padding: 20px;                   /* Inner spacing */
+    background-color: white;         /* White background */
+    border-radius: 8px;              /* Rounded corners */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Team section */
+.team {
+    display: flex;                   /* Flexbox layout */
+    justify-content: space-around;   /* Space between members */
+    margin-top: 20px;                /* Space above team */
+}
+
+/* Individual team member */
+.team-member {
+    text-align: center;              /* Center-align text */
+    width: 150px;                    /* Fixed width */
+}
+
+/* Team member profile image */
+.team-member img {
+    width: 100px;                    /* Fixed size */
+    height: 100px;
+    border-radius: 50%;              /* Circle shape */
+}
+
+/* Contact info + social links container */
+.contact-info, .social-links {
+    margin-top: 20px;                /* Space above */
+}
+
+/* Social media icons */
+.social-links img {
+    width: 30px;                     /* Small icons */
+    margin: 0 10px;                  /* Space between icons */
+}
+
+/* Embedded maps/videos */
+iframe {
+    border: 0;                       /* Remove border */
+    width: 100%;                     /* Full width */
+    height: 300px;                   /* Fixed height */
+    margin-top: 20px;                /* Space above */
+    border-radius: 8px;              /* Rounded corners */
+}
+
+/* Features section */
+.features {
+    display: flex;                   /* Flexbox layout */
+    justify-content: space-around;   /* Spread items */
+    flex-wrap: wrap;                 /* Wrap to next line if needed */
+    margin-top: 30px;                /* Space above */
+}
+
+/* Individual feature card */
+.feature {
+    background-color: #ffffff;       /* White card */
+    border-radius: 8px;              /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    padding: 20px;                   /* Inner spacing */
+    width: 250px;                    /* Fixed width */
+    margin: 10px;                    /* Space between cards */
+}
+
+/* Images inside feature cards */
+.feature img {
+    width: 100%;                     /* Full width inside card */
+    height: 120px;                   /* Fixed height */
+    object-fit: cover;               /* Crop image nicely */
+    border-radius: 5px;              /* Slightly rounded */
+}
+
+/* Call-to-action section */
+.cta {
+    background-color: white;         /* White background */
+    color: black;                    /* Black text */
+    padding: 20px;                   /* Inner spacing */
+    margin-top: 40px;                /* Space above */
+    border-radius: 8px;              /* Rounded corners */
+    font-size: 1.2em;                /* Slightly larger text */
+}
+
+/* Preview box (maybe for messages or outputs) */
+.preview {
+    margin-top: 20px;                /* Space above */
+    padding: 15px;                   /* Inner spacing */
+    background-color: #e7f3ff;       /* Light blue background */
+    border-left: 5px solid #2196F3;  /* Blue accent on the left */
+    text-align: left;                /* Align text to left */
+    max-width: 400px;                /* Limit width */
+    margin-left: auto;               /* Center horizontally */
+    margin-right: auto;
+    border-radius: 6px;              /* Rounded corners */
+}
