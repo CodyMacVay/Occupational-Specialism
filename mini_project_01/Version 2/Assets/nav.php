@@ -1,12 +1,14 @@
 <?php
 
 echo "
-    <div id='nav'>
+    <div class='nav'>
         <nav>
-        <a href='index.php'>Home</a>  <!-- Link to Home page. -->
-        <a href='about.php'>About</a> <!-- Link to About page. -->
-        <a href='contact.php'>Contact</a> <!-- Link to Contact page. -->
-        <a href='signup.php'>Signup</a> <!-- Link to signup page. -->
+            <ul>
+                 <li><a href='index.php'>Home</a></li>  <!-- Link to Home page. -->
+                 <li><a href='about.php'>About</a></li> <!-- Link to About page. -->
+                 <li><a href='contact.php'>Contact</a></li> <!-- Link to Contact page. -->
+                 <li><a href='signup.php'>Signup</a></li> <!-- Link to signup page. -->
+            </ul>
         </nav>
     </div>
 ";
