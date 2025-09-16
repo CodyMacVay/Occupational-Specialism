@@ -19,3 +19,8 @@ nav ul{
 nav li:hover {
     background-color: #4CAF50;
 }
+
+#purl {
+    width: 300px;
+
+}

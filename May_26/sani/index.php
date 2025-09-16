@@ -20,23 +20,28 @@ Echo "<!DOCTYPE html>";
             echo "<div id='content'>";
     echo usr_msg();
 
-            echo "<h2>Sani</h2>";
+            echo "<h2> Sani </h2>";
 
-            if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-                $_POST['message'];
-                $_POST['email'];
-                $_POST['url'];
-            }
             echo "<form method='post' action=''>";
-            echo "<input type='text' name='message' placeholder='Message'>";
+            echo "<input type='text' name='message' placeholder='Message' required>";
             echo "<br>";
-            echo "<input type'email' name='email' placeholder='Email'>";
+            echo "<input type='email' name='email' placeholder='Email' required>";
             echo "<br>";
-            echo "<input type='url' name='url' placeholder='URL'>";
+            echo "<input type='url' name='url' placeholder='URL' required>";
             echo "<br>";
             echo "<input type='submit' name='submit' value='Send'>";
+            echo "<br>";
+            echo "<br>";
+            echo "</form>";
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+    echo "Your Name:" . $_POST['message'];
+    echo "<br>";
+    echo "Your Email: " . $_POST['email'];
+    echo "<br>";
+    echo "<p id = 'purl'> URL: ".$_POST['url']."</p>";
+}
             echo "</div>";
         echo "</div>";
     echo "</body>";
