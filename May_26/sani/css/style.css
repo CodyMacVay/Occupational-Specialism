@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: x-large;
+    font-family: Arial, sans-serif;
+}
+
+nav ul{
+    list-style-type: none;  /* Removes the bullet points from the list */
+    margin: 0;  /* Removes any margins */
+    padding: 0;  /* Removes any padding */
+    display: flex;
+    justify-content: flex-start;
+    background-color: #333
+}
+
+nav li:hover {
+    background-color: #4CAF50;
+}
