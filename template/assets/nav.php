@@ -1,15 +1,11 @@
 <?php
 
-echo "
-    <div class='nav'>
-        <nav>
-            <ul>
-                <li> <a href='index.php'>Home</a> </li>  <!-- Link to Home page. -->
-                <li> <a href='about.php'>About</a> </li> <!-- Link to About page. -->
-                <li> <a href='contact.php'>Contact</a> </li> <!-- Link to Contact page. -->
-                <li> <a href='signup.php'>Signup</a> </li> <!-- Link to signup page. -->
-            </ul>  
-        </nav>
-    </div>
-";
+    echo "<div class='nav'>";
+        echo "<nav>";
+            echo "<ul>";
+                echo "<li> <a href='index.php'>Home</a> </li>"; // Link to Home page.
+                echo "<li> <a href='passcheck.php'>Password Checker</a> </li>"; // Link to About page.
+            echo "</ul>";
+        echo "</nav>";
+    echo "</div>";
 ?>
