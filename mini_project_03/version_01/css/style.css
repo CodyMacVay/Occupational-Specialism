@@ -1,15 +1,20 @@
 .container {
     display: flex;
     justify-content: center;
-    /*align-items: center;*/
     flex-direction: column;
     font-size: x-large;
     font-family: Arial, sans-serif;
+    max-width: 1400px;
+    margin:0 auto;
+    background:#fff;
+    padding:20px;
 }
 
-/*body {
-    background-color: #4CAF50;
-}*/
+body {
+    padding: 0;
+    margin:0;
+    background-color: #2C2A2A;
+}
 
 #header img {
     width: 100%;
@@ -23,7 +28,7 @@ nav ul {
     margin: 0;  /* Removes any margins */
     padding: 0;  /* Removes any padding */
     display: flex;
-    background-color: #4CAF50;
+    background-color: #049C69;
 }
 
 nav a {
@@ -44,6 +49,6 @@ h2 {
 
 footer {
     text-align: center;
-    background-color: #4CAF50;
+    background-color: #049C69;
     color: white;
 }
