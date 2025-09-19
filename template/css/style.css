@@ -19,3 +19,18 @@ nav ul{
 nav li:hover {
     background-color: #4CAF50;
 }
+
+
+
+
+
+
+
+
+nav {
+    background-color: #1ca463;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    align-content: center;
+}
