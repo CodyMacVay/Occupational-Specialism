@@ -52,3 +52,11 @@ footer {
     background-color: #049C69;
     color: white;
 }
+
+.success {
+    background-color: limegreen;
+}
+
+.fail {
+    background-color: Red;
+}
