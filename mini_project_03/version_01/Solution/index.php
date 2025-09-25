@@ -15,7 +15,7 @@ echo "<body>";
     require_once "assets/nav.php";
 
     echo "<div class='content'>";
-        echo "<h2>Password Strength Checker  Our password checker helps you create a stronger,   
+        echo "<h2>Password Strength Checker Our password checker helps you create a stronger,   
                    more secure password in real time. As you type, it analyzes your password for length, 
                    complexity, and uniqueness. You’ll get instant feedback on whether your password is weak, 
                    moderate, or strong, along with suggestions for making it more secure.
