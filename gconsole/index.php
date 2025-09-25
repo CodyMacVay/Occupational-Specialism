@@ -1,6 +1,8 @@
 <?php
 session_start(); // Needs to be on each page of the website //
 
+require_once "assets/dbcon.php";
+
 Echo "<!DOCTYPE html>";
     echo "<html>";
     echo "<head>";
@@ -16,6 +18,13 @@ require_once "assets/nav.php";
 
     echo "<div id='content'>";
         echo "<h1>Games are not fun and extremely addictive!</h1>";
+        echo "<img id = 'main' src='images/main.jfif'>";
+try {
+    $conn = dbconnect_insert();
+    echo"success";
+}  catch (PDOException $e) {
+    echo $e->getMessage();
+}
     echo "</div>";
     echo "</div>";
     echo "</body>";

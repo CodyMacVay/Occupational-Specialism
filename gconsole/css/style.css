@@ -7,6 +7,14 @@
     font-family: Arial, sans-serif;
 }
 
+#header {
+    width: 100%;
+    height: 200px;
+    background-image: url("concole.png");
+    background-size: cover;
+    background-position: center;
+}
+
 #header img {
     width: 100%;
     height: 200px;
@@ -48,6 +56,21 @@ body {
 
 p {
     color: white;
+}
+
+/*body img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}*/
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-image: url("main.jfif");
+    background-size: auto;
+    background-position: center;
+
 }
 
 
