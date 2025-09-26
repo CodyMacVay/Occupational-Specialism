@@ -26,6 +26,7 @@ try {
     echo $e->getMessage();
 }
     echo "</div>";
+
     echo "</div>";
     echo "</body>";
     echo "</html>";

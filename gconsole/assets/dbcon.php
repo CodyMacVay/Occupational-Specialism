@@ -4,9 +4,9 @@ function dbconnect_insert(){
 
     $servername = "localhost";  // Sets Server name;  Should not be stored here at all
 
-    $dbusername = "gconsoleinsert";  // Had to change this variable name as it fought against;    Should not be stored here at all
+    $dbusername = "root";  // Had to change this variable name as it fought against;    Should not be stored here at all
 
-    $dbpassword = "password1g";  // Password for database useraccount;     Should not be stored here at all
+    $dbpassword = "";  // Password for database useraccount;     Should not be stored here at all
 
     $dbname = "gconsole";  // Dtabase name to connect to; Should not be stored here at all
 

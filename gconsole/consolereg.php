@@ -1,5 +1,17 @@
 <?php
+
 session_start();
+
+require_once "assets/dbcon.php";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST"){
+    try{
+        new_console(dbconnect_insert(), $_POST);
+        $_SESSION['usermessage'] = "SUCCESS: Console created";
+    } catch(PDOException $e){
+        $_SESSION['usermessage'] = $e->getMessage();
+    }
+}
 
 echo "<!DOCTYPE html>";
 echo "<html lang='en'>";
@@ -16,6 +28,12 @@ require_once 'assets/nav.php';
 echo "<div class='content'>";
 echo "<h1>Register a Console</h1>";
 echo "<p>Enter Console Details</p>";
+echo "<br>";
+
+echo user_message();
+
+echo "<br>";
+
     echo "<form actiom='' method='post'>";
     echo "<br>";
     echo"<input type='text' name='Manufacturer' placeholder='Manufacturer'>";
