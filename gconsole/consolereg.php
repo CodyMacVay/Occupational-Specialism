@@ -3,6 +3,7 @@
 session_start();
 
 require_once "assets/dbcon.php";
+require_once "assets/common.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST"){
     try{
@@ -36,13 +37,13 @@ echo "<br>";
 
     echo "<form actiom='' method='post'>";
     echo "<br>";
-    echo"<input type='text' name='Manufacturer' placeholder='Manufacturer'>";
+    echo"<input type='text' name='manufacturer' placeholder='Manufacturer'>";
     echo "<br>";
-    echo"<input type='text' name='cname' placeholder='Console Name'>";
+    echo"<input type='text' name='c_name' placeholder='Console Name'>";
     echo "<br>";
-    echo"<input type='text' name='released' placeholder='Release Date'>";
+    echo"<input type='text' name='release_date' placeholder='Release Date'>";
     echo "<br>";
-    echo "<input type='text' name='cnumber' placeholder='Controller Number'>";
+    echo "<input type='text' name='controller_no' placeholder='Controller Number'>";
     echo "<br>";
     echo "<input type='text' name='bit' placeholder='Number of Bits'>";
     echo "<br>";

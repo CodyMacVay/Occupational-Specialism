@@ -11,12 +11,11 @@ function dbconnect_insert(){
     $dbname = "gconsole";  // Dtabase name to connect to; Should not be stored here at all
 
     try {  // Attempt this block of code, catching an error
-        $conn = new PDO("mysql:host=$servername; port: 3306; dbname=$dbname", $dbusername, $dbpassword);
+        $conn = new PDO("mysql:host=$servername; port=3306; dbname=$dbname", $dbusername, $dbpassword);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
     } catch(PDOException $e) {
         error_log("Database Connection Failed: " . $e->getMessage());
-
         throw $e;
     }
 }
