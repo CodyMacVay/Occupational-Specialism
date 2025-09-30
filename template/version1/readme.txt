@@ -1,0 +1,1 @@
+Version one is to develop your database as every website needs a backbone for the website to look and run functionally
