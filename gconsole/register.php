@@ -1,6 +1,23 @@
 <?php
 session_start();
 
+require_once "assets/common.php"; //requires these files to run, if they are not present it will not run
+require_once "assets/dbcon.php"; //requires these files to run, if they are not present it will not run
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    if(!only_user(dbconnect_insert(), $_POST["username"])){
+
+        if (reg_user(dbconnect_insert(),$_POST)){
+            $_SESSION["usermessage"] = "user created successfully";
+        } else{
+            $_SESSION["usermessage"] = "user creation failed";
+        }
+    } else {
+        $_SESSION["usermessage"] = "user already exists";
+    }
+}
+
 echo "<!DOCTYPE html>";
 echo "<html lang='en'>";
 echo "<head>";

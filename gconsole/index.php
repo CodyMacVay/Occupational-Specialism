@@ -1,6 +1,15 @@
 <?php
 session_start(); // Needs to be on each page of the website //
 
+if (!isset($_GET["message"])){
+    session_start();
+    $message = false;
+} else{
+    // decodes the message for display
+    $message = htmlspecialchars(urldecode($_GET["message"]));
+}
+
+require_once "assets/common.php";
 require_once "assets/dbcon.php";
 
 Echo "<!DOCTYPE html>";
