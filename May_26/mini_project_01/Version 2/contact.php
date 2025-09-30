@@ -11,7 +11,7 @@ echo "
 require "Assets/topbar.php";
 require_once "Assets/nav.php";
 
-echo"    
+echo "    
     <div class='section'>
         <h1>Contact Us</h1>
         <p>Feel free to reach out using the form below.</p>
@@ -25,7 +25,7 @@ echo"
         </form>
 
         <div class='contact-info'>
-            <p><strong>Email:</strong> gibjohntutoring@gmail.com</p>
+            <p><strong>Email:</strong> itsupport@gmail.com</p>
             <p><strong>Phone:</strong> +44 111 222 3333</p>
             <p><strong>Location:</strong> Leeds, UK</p>
             <p><strong>Hours:</strong> Mon - Fri, 9am - 5pm</p>
@@ -40,11 +40,7 @@ echo"
     <form action='index.php'>
         <button type='submit'>Go to Home</button>
     </form>
-</body>";
-
-require_once "Assets/bottombar.php";
-
-echo "
+</body>
 </html>
 ";
 ?>

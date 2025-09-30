@@ -11,7 +11,7 @@ echo "
 require "Assets/topbar.php";
 require_once "Assets/nav.php";
 
-echo"        
+echo "        
         <h1>About Us</h1>
         <p> We are a tutoring company who are wanting to help your children improve their education</p>
         <br>
