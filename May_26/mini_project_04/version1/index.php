@@ -19,4 +19,4 @@ echo "<div id='content'>";
     echo "</div>";
     echo "</body>";
     echo "</html>";
-?>
+?>+
