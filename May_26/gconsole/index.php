@@ -30,7 +30,6 @@ require_once "assets/nav.php";
         echo "<img id = 'main' src='images/main.jfif'>";
 try {
     $conn = dbconnect_insert();
-    echo"success";
 }  catch (PDOException $e) {
     echo $e->getMessage();
 }

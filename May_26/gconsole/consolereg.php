@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     try{
         new_console(dbconnect_insert(), $_POST);
         $_SESSION['usermessage'] = "SUCCESS: Console created";
+        auditor(dbconnect_insert(), $_SESSION['userid'], "ccr", "Console has been successfully registered ");
     } catch(PDOException $e){
         $_SESSION['usermessage'] = $e->getMessage();
     }
