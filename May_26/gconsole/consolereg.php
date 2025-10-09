@@ -21,10 +21,17 @@ echo "<title>Password Strength Checker</title>";
 echo "<link rel='stylesheet' href='css/style.css'>";
 echo "</head>";
 
-echo "<body>";
-echo "<div class='container'>";
 require_once 'assets/topbar.php';
 require_once 'assets/nav.php';
+
+if (!isset($_SESSION['user'])) {//checks if user is already logged in if so it directs you to the index page
+    $_SESSION['usermessage'] = "You need to login first";
+    header('Location: login.php'); //headers only work if no content has loaded on the page
+    exit; //by forcing the exit it stops anything from being loaded before redirecting, allowing redirection
+}
+
+echo "<body>";
+echo "<div class='container'>";
 
 echo "<div class='content'>";
 echo "<h1>Register a Console</h1>";
