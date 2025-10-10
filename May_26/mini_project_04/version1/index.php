@@ -1,22 +1,45 @@
-<?php
-session_start(); // Needs to be on each page of the website //
+<?php // This open the php code section
 
-Echo "<!DOCTYPE html>";
-    echo "<html lang='en'>";
-    echo "<head>";
-        echo "<meta charset='utf-8'>";
-        echo "<link rel='stylesheet' href='css/style.css'>";
-    echo "</head>";
+session_start();
+require_once "assets/common.php";
 
-    echo "<body>";
-        require_once "assets/topbar.php";
-         echo "<div class='container'>";
-            echo "<p> Welcome to primary Oaks Surgery appointment system (V1) </p>";
-            echo "<form action ='' method='post'>";
-            echo "<input type='text' name='message' placeholder='Username'>";
-            echo "<br>";
-            echo "<input type='password' name='password' placeholder='Password'>";
-            echo "<br>";
-            echo "<input type='submit' name='submit' placeholder='Submit'>";
+    echo "<!DOCTYPE html>";  # essential html line to dictate the page type
 
+    echo "<html>";  # opens the html content of the page
+
+        echo "<head>";  # opens the head section
+
+            echo "<title> Version 1</title>";  # sets the title of the page (web browser tab)
+            echo "<link rel='stylesheet' type='text/css' href='css/style.css' />";  # links to the external style sheet
+
+        echo "</head>";  # closes the head section of the page
+
+echo "<body>";  # opens the body for the main content of the page.
+
+    echo "<div class='container'>";
+
+require_once "assets/topbar.php";
+
+require_once "assets/nav.php";
+
+    echo "<div class='content'>";
+        echo "<br>";
+
+    echo "<h2> Welcome to Primary Oaks - Your Health is our Concern</h2>";  # sets a h2 heading as a welcome
+
+    echo "<p class='content'> Boiler plate text about the doctors surgery </p>";
+
+    echo "<p class='content'> You have to be registered to login and book </p>";
+
+    echo "<br>";
+
+echo usermessage();
+
+    echo "</div>";
+
+echo "</div>";
+
+echo "</body>";
+
+echo "</html>";
 ?>
