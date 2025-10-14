@@ -167,3 +167,13 @@ function audtitor($conn, $userid, $code, $long){  # on doing any action, auditor
     return true; // Registration successful
 }
 
+function staff_getter($conn) {
+    $sql = "SELECT staffid, role, fname, sname, room FROM staff WHERE role != ? ORDER by role DESC";
+    $stmt = $conn->prepare($sql);
+    $exclude_role = 'adm';
+
+    $stmt->execute(1, $exclude_role);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);  // Fetches all the roles that matches in the database rather than only fetching one(fetch is one only fecth all is all of them in the database)
+    $conn = null;
+    return $result;
+}

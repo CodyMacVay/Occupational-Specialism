@@ -1,1 +1,1 @@
-Copy everything from version 2 and now add all the bells and whistles to complete the website design by making it look readable and somewhat have a good design and look to it
+Version one is to develop your database as every website needs a backbone for the website to look and run functionally
