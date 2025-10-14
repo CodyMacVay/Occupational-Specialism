@@ -1,16 +1,18 @@
 <?php
-echo "<div class='navi'>";
-    echo "<nav>";  #decales
 
-        echo "<ul>";  #declares an unordered list
+echo "<div class='nav'>";
+echo "<nav>";
+echo "<ul>";
+echo "<li> <a href='index.php'>Home</a> </li>"; // Link to Home page.
 
-
-            echo "<li class='linkbox'> <a href='index.php'>Home</a></li>"; #open a cell for a link to be housed
-            echo "<li class='linkbox'> <a href='register.php'>Register</a></li>";
-            echo "<li class='linkbox'> <a href='login.php'>Login</a></li>";
-
-        echo "</ul>";  # closes the row of the table.
-
-    echo "</nav>";
-
+if(!isset($_SESSION['user'])) {
+    echo "<li> <a href = 'login.php'>Login</a> </li>";
+    echo "<li> <a href='register.php'>Register</a> </li>";
+} else {
+    echo "<li> <a href='book.php'>Make a Booking</a> </li>";
+    echo "<li> <a href='bookings.php'>Manage your bookings</a> </li>";
+}
+echo "</ul>";
+echo "</nav>";
 echo "</div>";
+?>
