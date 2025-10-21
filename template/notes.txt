@@ -1,0 +1,1 @@
+Make sure all of our try catches are in none of the common php files and only in the individual pages itself

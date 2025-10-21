@@ -1,4 +1,4 @@
-<?php // This open the php code section
+  l<?php // This open the php code section
 
 session_start();
 require_once "assets/common.php";
