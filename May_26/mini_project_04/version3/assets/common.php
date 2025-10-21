@@ -167,13 +167,40 @@ function audtitor($conn, $userid, $code, $long){  # on doing any action, auditor
     return true; // Registration successful
 }
 
-function staff_getter($conn) {
-    $sql = "SELECT staffid, role, fname, sname, room FROM staff WHERE role != ? ORDER by role DESC";
-    $stmt = $conn->prepare($sql);
-    $exclude_role = 'adm';
+function staf_geter($conn){
+    // function to get all the staff suitable for an appointment
 
-    $stmt->execute(1, $exclude_role);
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);  // Fetches all the roles that matches in the database rather than only fetching one(fetch is one only fecth all is all of them in the database)
+    $sql = "SELECT staffid, role, fname, sname, room FROM staff WHERE role != ? ORDER BY role DESC";
+    //get all staff from datbase where role NOT equal to "adm" - this is admin role, none bookable
+    $stmt = $conn->prepare($sql);
+    $exclude_role = "adm";
+
+    $stmt->bindParam(1, $exclude_role);
+
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $conn = null;
     return $result;
+}
+
+function commit_booking($conn, $appt){
+    $sql = "INSERT INTO user (email, password, fname, sname, dob, sign_up, addressln1, addressln2, postcode, county, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";  //prepare the sql to be sent
+    $stmt = $conn->prepare($sql); //prepare to sql
+
+    $stmt->bindParam(1, $_POST['email']);  //bind parameters for security
+    // Hash the password
+    $stmt->bindParam(2, password_hash($_POST['password'], PASSWORD_DEFAULT));
+    $stmt->bindParam(3, $_POST['fname']);
+    $stmt->bindParam(4, $_POST['sname']);
+    $stmt->bindParam(5, $_POST['dob']);
+    $stmt->bindParam(6, date('Y-m-d'));
+    $stmt->bindParam(7, $_POST['addressln1']);
+    $stmt->bindParam(8, $_POST['addressln2']);
+    $stmt->bindParam(9, $_POST['postcode']);
+    $stmt->bindParam(10, $_POST['county']);
+    $stmt->bindParam(11, $_POST['phone']);
+
+    $stmt->execute();  //run the query to insert
+    $conn = null;  // closes the connection so cant be abused.
+    return true; // Registration successful
 }

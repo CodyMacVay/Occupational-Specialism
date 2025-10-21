@@ -57,7 +57,7 @@ echo "<br>";
 
 echo "<form action='' method='post'>";
 
-$staff = staff_getter(dbconnect_select());
+$staff = staf_geter(dbconnect_select());
 
 
 echo "<label for='appt_time'> Appointment Time:</label>";
