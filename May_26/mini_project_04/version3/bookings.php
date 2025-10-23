@@ -9,19 +9,23 @@ if (!isset($_SESSION['userid'])) {  # If they have managed to get to this page w
     $_SESSION['usermessage'] = "ERROR: You are not logged in!";
     header("Location: login.php");
     exit;
-}elseif($_SERVER['REQUEST_METHOD'] === "POST"){
-    if(isset($_POST['appdelete'])){
-        try{
-            if(cancel_appt(dbconnect_select(), $_POST['apptid'])){
+}elseif($_SERVER['REQUEST_METHOD'] === "POST") {
+    if (isset($_POST['appdelete'])) {
+        try {
+            if (cancel_appt(dbconnect_select(), $_POST['apptid'])) {
                 $_SESSION['usermessage'] = "SUCCESS: Your Appointment was canceled";
-            }else {
+            } else {
                 $_SESSION['usermessage'] = "ERROR: Could not cancel Appointment";
             };
         } catch (PDOException $e) {
-            $_SESSION['message'] = "ERROR: ".$e->getMessage();
-        } catch (Exception $e){
-            $_SESSION['message'] = "ERROR: ".$e->getMessage();
+            $_SESSION['message'] = "ERROR: " . $e->getMessage();
+        } catch (Exception $e) {
+            $_SESSION['message'] = "ERROR: " . $e->getMessage();
         }
+    } elseif (isset($_POST['appchange'])) {
+        $_SESSION['apptid'] = $_POST['apptid'];
+        header('Location: alterbooking.php');
+        exit;
     }
 }
 
@@ -97,4 +101,4 @@ echo "</div>";
 echo "</body>";
 
 echo "</html>";
-?>
+
