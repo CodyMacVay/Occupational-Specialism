@@ -183,24 +183,40 @@ function staf_geter($conn){
     return $result;
 }
 
-function commit_booking($conn, $appt){
-    $sql = "INSERT INTO user (email, password, fname, sname, dob, sign_up, addressln1, addressln2, postcode, county, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";  //prepare the sql to be sent
+function commit_booking($conn, $epoch){
+    $sql = "INSERT INTO book (userid, staffid, appointmentdate, bookedon) VALUES (?, ?, ?, ?)";  //prepare the sql to be sent
     $stmt = $conn->prepare($sql); //prepare to sql
 
-    $stmt->bindParam(1, $_POST['email']);  //bind parameters for security
+    $stmt->bindParam(1, $_SESSION["userid"]);  //bind parameters for security
     // Hash the password
-    $stmt->bindParam(2, password_hash($_POST['password'], PASSWORD_DEFAULT));
-    $stmt->bindParam(3, $_POST['fname']);
-    $stmt->bindParam(4, $_POST['sname']);
-    $stmt->bindParam(5, $_POST['dob']);
-    $stmt->bindParam(6, date('Y-m-d'));
-    $stmt->bindParam(7, $_POST['addressln1']);
-    $stmt->bindParam(8, $_POST['addressln2']);
-    $stmt->bindParam(9, $_POST['postcode']);
-    $stmt->bindParam(10, $_POST['county']);
-    $stmt->bindParam(11, $_POST['phone']);
+    $stmt->bindParam(2, $_POST['staff']);
+    $stmt->bindParam(3, $epoch);
+    $tmp = time();
+    $stmt->bindParam(4, $tmp);
+
 
     $stmt->execute();  //run the query to insert
     $conn = null;  // closes the connection so cant be abused.
     return true; // Registration successful
 }
+
+function appt_getter($conn){
+    // Finction to get all the staff suitable for an appointment
+
+    $sql = "SELECT b.bookid, b.appointmentdate, b.bookedon, s.role, s.fname, s.sname, s.room FROM book b JOIN staff s ON b.staffid = s.staffid WHERE b.userid = ? 
+    ORDER BY b.appointmentdate ASC"; // A join sql statement that joins two tables from our database where each field is exactly named as the on inside the table
+    // The b and s in front of each field is a short description of the table name where we give it that variable after FROM
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bindParam(1, $_SESSION["userid"]);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $conn = null;
+    if($result) {
+        return $result;
+    }else{
+        return false;
+    }
+
+}
+
