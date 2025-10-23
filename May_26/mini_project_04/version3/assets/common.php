@@ -220,3 +220,12 @@ function appt_getter($conn){
 
 }
 
+function cancel_appt($conn, $aptid) {
+    $sql = "DELETE FROM book WHERE bookid = ?"; // will delete the users booking if the user clicks on the cancel it would then delete off the database
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(1, $aptid);
+    $stmt->execute();
+    $conn = null;
+    return true;
+}
+
